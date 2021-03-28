@@ -7,3 +7,19 @@
 # 4)greatest increase in profits (date and amount) 
 # over entire period, 
 # 5)greatest decrease in losses (date and amount) over entire period
+import os
+import csv
+
+
+budget_csv = os.path.join('PyBank','Resources','budget_data.csv')
+
+
+#def analysis(budget_data):
+    #total_months = len(list(csvreader))
+
+with open(budget_csv, 'r') as csvfile:
+
+    # Split the data on commas
+    csvreader = csv.reader(csvfile, delimiter=',')
+
+    header = next(csvreader)
