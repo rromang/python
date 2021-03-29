@@ -5,3 +5,17 @@
 # 3)percentage of votes each candidate won, 
 # 4)total number of votes each candidate won 
 # 5)winner of the election based on popular vote
+
+import os
+import csv
+
+poll_path = os.path.join('PyPoll','Resources','election_data.csv')
+
+
+
+with open(poll_path, 'r') as csvfile:
+
+    # Split the data on commas
+    csvreader = csv.reader(csvfile, delimiter=',')
+
+    header = next(csvreader)
