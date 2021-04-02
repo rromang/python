@@ -91,4 +91,3 @@ with open(budget_csv, 'r') as csvfile:
     #calls function to do all calculations and 
     
     totals(row)
-
