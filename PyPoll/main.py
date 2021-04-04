@@ -55,9 +55,9 @@ def summary_data():
    print(f'Winner: {winner}')
    print(heading2)
 
-   #writes the data in a text file
-   analysis_file = open(r'/Users/rosaicelaroman/Desktop/Data_BootCamp/LearnPython/python-challenge/PyPoll/Analysis/pyPoll.txt', "a+")
-   analysis_file.writelines(heading1 + "\n")
+   #writes the data in a text file PyPoll/Analysis/pyPoll.txt
+   analysis_file = open(os.path.join('PyPoll','Analysis',"pyPoll.txt"), "a+")
+   analysis_file.writelines(heading1)
    analysis_file.writelines(heading2 + "\n")
    analysis_file.writelines(f'Total Votes: {total_votes}\n')
    analysis_file.writelines(heading2 + '\n')

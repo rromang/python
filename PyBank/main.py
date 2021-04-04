@@ -14,6 +14,7 @@ from statistics import mean
 
 budget_csv = os.path.join('Resources','budget_data.csv')
 
+
 #define function for the calcs
 def totals(budget_data):
    
@@ -46,7 +47,7 @@ def totals(budget_data):
     str_great_inc = (f"Greatest increase in profits: {max_key} (${great_inc}) \n")
     str_great_inc = (f"Greatest decrease in profits: {min_key} (${great_dec}) \n")
     #create file with append mode and add each string line then close file
-    analysis_file = open(r'/Users/rosaicelaroman/Desktop/Data_BootCamp/LearnPython/python-challenge/PyBank/Analysis/pyBank.txt', "a+")
+    analysis_file = open(os.path.join('PyBank','Analysis','pyBank.txt'), "a+")
     analysis_file.writelines(heading1)
     analysis_file.writelines(heading2)
     analysis_file.writelines(str_total_months)
